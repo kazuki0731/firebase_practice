@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../firebase";
 import { Link, useHistory } from "react-router-dom";
-import { useAuthContext } from "../cotext/AuthProvider";
 
 export const Login = () => {
   const history = useHistory();
@@ -35,7 +34,7 @@ export const Login = () => {
           <button>ログイン</button>
         </div>
         <div>
-          ユーザー登録は<Link to="./Signup">こちら</Link>から
+          ユーザー登録は<Link to="/signup">こちら</Link>から
         </div>
       </form>
     </>
